@@ -1,0 +1,2641 @@
+{
+  "./src/core/annotation.js": {
+    "../shared/util.js": [
+      "AnnotationActionEventType",
+      "AnnotationBorderStyleType",
+      "AnnotationEditorType",
+      "AnnotationFieldFlag",
+      "AnnotationFlag",
+      "AnnotationReplyType",
+      "AnnotationType",
+      "assert",
+      "BASELINE_FACTOR",
+      "FeatureTest",
+      "getModificationDate",
+      "IDENTITY_MATRIX",
+      "LINE_DESCENT_FACTOR",
+      "LINE_FACTOR",
+      "OPS",
+      "RenderingIntentFlag",
+      "shadow",
+      "stringToPDFString",
+      "unreachable",
+      "Util",
+      "warn"
+    ],
+    "./core_utils.js": [
+      "collectActions",
+      "escapeString",
+      "getInheritableProperty",
+      "getRotationMatrix",
+      "isAscii",
+      "numberToString",
+      "stringToUTF16String"
+    ],
+    "./default_appearance.js": [
+      "createDefaultAppearance",
+      "FakeUnicodeFont",
+      "getPdfColor",
+      "parseAppearanceStream",
+      "parseDefaultAppearance"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "isName",
+      "Name",
+      "Ref",
+      "RefSet"
+    ],
+    "./stream.js": [
+      "Stream",
+      "StringStream"
+    ],
+    "./writer.js": [
+      "writeDict",
+      "writeObject"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./bidi.js": [
+      "bidi"
+    ],
+    "./catalog.js": [
+      "Catalog"
+    ],
+    "./colorspace.js": [
+      "ColorSpace"
+    ],
+    "./file_spec.js": [
+      "FileSpec"
+    ],
+    "./jpeg_stream.js": [
+      "JpegStream"
+    ],
+    "./object_loader.js": [
+      "ObjectLoader"
+    ],
+    "./operator_list.js": [
+      "OperatorList"
+    ],
+    "./xfa/factory.js": [
+      "XFAFactory"
+    ]
+  },
+  "./src/core/arithmetic_decoder.js": {},
+  "./src/core/ascii_85_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./core_utils.js": [
+      "isWhiteSpace"
+    ]
+  },
+  "./src/core/ascii_hex_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ]
+  },
+  "./src/core/base_stream.js": {
+    "../shared/util.js": [
+      "bytesToString",
+      "shadow",
+      "unreachable"
+    ]
+  },
+  "./src/core/bidi.js": {
+    "../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/binary_cmap.js": {
+    "../shared/util.js": [
+      "FormatError"
+    ]
+  },
+  "./src/core/calibri_factors.js": {},
+  "./src/core/catalog.js": {
+    "./core_utils.js": [
+      "collectActions",
+      "MissingDataException",
+      "PDF_VERSION_REGEXP",
+      "recoverJsURL",
+      "toRomanNumerals",
+      "XRefEntryException"
+    ],
+    "../shared/util.js": [
+      "createValidAbsoluteUrl",
+      "DocumentActionEventType",
+      "FormatError",
+      "info",
+      "objectSize",
+      "PermissionFlag",
+      "shadow",
+      "stringToPDFString",
+      "stringToUTF8String",
+      "warn"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "isDict",
+      "isName",
+      "isRefsEqual",
+      "Name",
+      "Ref",
+      "RefSet",
+      "RefSetCache"
+    ],
+    "./name_number_tree.js": [
+      "NameTree",
+      "NumberTree"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./cleanup_helper.js": [
+      "clearGlobalCaches"
+    ],
+    "./colorspace.js": [
+      "ColorSpace"
+    ],
+    "./file_spec.js": [
+      "FileSpec"
+    ],
+    "./image_utils.js": [
+      "GlobalImageCache"
+    ],
+    "./metadata_parser.js": [
+      "MetadataParser"
+    ],
+    "./struct_tree.js": [
+      "StructTreeRoot"
+    ]
+  },
+  "./src/core/ccitt.js": {
+    "../shared/util.js": [
+      "FormatError",
+      "info"
+    ]
+  },
+  "./src/core/ccitt_stream.js": {
+    "./ccitt.js": [
+      "CCITTFaxDecoder"
+    ],
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./primitives.js": [
+      "Dict"
+    ]
+  },
+  "./src/core/cff_font.js": {
+    "./cff_parser.js": [
+      "CFFCompiler",
+      "CFFParser"
+    ],
+    "./fonts_utils.js": [
+      "SEAC_ANALYSIS_ENABLED",
+      "type1FontGlyphMapping"
+    ],
+    "../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/cff_parser.js": {
+    "../shared/util.js": [
+      "bytesToString",
+      "FormatError",
+      "info",
+      "shadow",
+      "stringToBytes",
+      "Util",
+      "warn"
+    ],
+    "./charsets.js": [
+      "ExpertCharset",
+      "ExpertSubsetCharset",
+      "ISOAdobeCharset"
+    ],
+    "./encodings.js": [
+      "ExpertEncoding",
+      "StandardEncoding"
+    ]
+  },
+  "./src/core/charsets.js": {},
+  "./src/core/chunked_stream.js": {
+    "./core_utils.js": [
+      "arrayBuffersToBytes",
+      "MissingDataException"
+    ],
+    "../shared/util.js": [
+      "assert",
+      "PromiseCapability"
+    ],
+    "./stream.js": [
+      "Stream"
+    ]
+  },
+  "./src/core/cleanup_helper.js": {
+    "./primitives.js": [
+      "clearPrimitiveCaches"
+    ],
+    "./unicode.js": [
+      "clearUnicodeCaches"
+    ]
+  },
+  "./src/core/cmap.js": {
+    "../shared/util.js": [
+      "CMapCompressionType",
+      "FormatError",
+      "unreachable",
+      "warn"
+    ],
+    "./primitives.js": [
+      "Cmd",
+      "EOF",
+      "isCmd",
+      "Name"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./binary_cmap.js": [
+      "BinaryCMapReader"
+    ],
+    "./parser.js": [
+      "Lexer"
+    ],
+    "./core_utils.js": [
+      "MissingDataException"
+    ],
+    "./stream.js": [
+      "Stream"
+    ]
+  },
+  "./src/core/colorspace.js": {
+    "../shared/util.js": [
+      "assert",
+      "FormatError",
+      "info",
+      "shadow",
+      "unreachable",
+      "warn"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "Name",
+      "Ref"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./core_utils.js": [
+      "MissingDataException"
+    ]
+  },
+  "./src/core/core_utils.js": {
+    "../shared/util.js": [
+      "AnnotationEditorPrefix",
+      "assert",
+      "BaseException",
+      "objectSize",
+      "stringToPDFString",
+      "warn"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "isName",
+      "Ref",
+      "RefSet"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ]
+  },
+  "./src/core/crypto.js": {
+    "../shared/util.js": [
+      "bytesToString",
+      "FormatError",
+      "isArrayEqual",
+      "PasswordException",
+      "PasswordResponses",
+      "stringToBytes",
+      "unreachable",
+      "utf8StringToString",
+      "warn"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "isName",
+      "Name"
+    ],
+    "./decrypt_stream.js": [
+      "DecryptStream"
+    ]
+  },
+  "./src/core/dataset_reader.js": {
+    "../shared/util.js": [
+      "stringToUTF8String",
+      "warn"
+    ],
+    "./core_utils.js": [
+      "parseXFAPath"
+    ],
+    "./xml_parser.js": [
+      "SimpleXMLParser"
+    ]
+  },
+  "./src/core/decode_stream.js": {
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./stream.js": [
+      "Stream"
+    ]
+  },
+  "./src/core/decrypt_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ]
+  },
+  "./src/core/default_appearance.js": {
+    "./primitives.js": [
+      "Dict",
+      "Name"
+    ],
+    "./core_utils.js": [
+      "escapePDFName",
+      "getRotationMatrix",
+      "numberToString",
+      "stringToUTF16HexString"
+    ],
+    "../shared/util.js": [
+      "LINE_DESCENT_FACTOR",
+      "LINE_FACTOR",
+      "OPS",
+      "warn"
+    ],
+    "./colorspace.js": [
+      "ColorSpace"
+    ],
+    "./evaluator.js": [
+      "EvaluatorPreprocessor"
+    ],
+    "./stream.js": [
+      "StringStream"
+    ]
+  },
+  "./src/core/document.js": {
+    "../shared/util.js": [
+      "AnnotationEditorPrefix",
+      "assert",
+      "FormatError",
+      "info",
+      "InvalidPDFException",
+      "isArrayEqual",
+      "PageActionEventType",
+      "RenderingIntentFlag",
+      "shadow",
+      "stringToBytes",
+      "stringToPDFString",
+      "stringToUTF8String",
+      "unreachable",
+      "Util",
+      "warn"
+    ],
+    "./annotation.js": [
+      "AnnotationFactory",
+      "PopupAnnotation"
+    ],
+    "./core_utils.js": [
+      "collectActions",
+      "getInheritableProperty",
+      "getNewAnnotationsMap",
+      "isWhiteSpace",
+      "MissingDataException",
+      "PDF_VERSION_REGEXP",
+      "validateCSSFont",
+      "XRefEntryException",
+      "XRefParseException"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "isName",
+      "isRefsEqual",
+      "Name",
+      "Ref",
+      "RefSet"
+    ],
+    "./xfa_fonts.js": [
+      "getXfaFontDict",
+      "getXfaFontName"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./crypto.js": [
+      "calculateMD5"
+    ],
+    "./catalog.js": [
+      "Catalog"
+    ],
+    "./cleanup_helper.js": [
+      "clearGlobalCaches"
+    ],
+    "./dataset_reader.js": [
+      "DatasetReader"
+    ],
+    "./parser.js": [
+      "Linearization"
+    ],
+    "./stream.js": [
+      "NullStream"
+    ],
+    "./object_loader.js": [
+      "ObjectLoader"
+    ],
+    "./operator_list.js": [
+      "OperatorList"
+    ],
+    "./evaluator.js": [
+      "PartialEvaluator"
+    ],
+    "./decode_stream.js": [
+      "StreamsSequenceStream"
+    ],
+    "./struct_tree.js": [
+      "StructTreePage"
+    ],
+    "./writer.js": [
+      "writeObject"
+    ],
+    "./xfa/factory.js": [
+      "XFAFactory"
+    ],
+    "./xref.js": [
+      "XRef"
+    ]
+  },
+  "./src/core/encodings.js": {},
+  "./src/core/evaluator.js": {
+    "../shared/util.js": [
+      "AbortException",
+      "assert",
+      "CMapCompressionType",
+      "FONT_IDENTITY_MATRIX",
+      "FormatError",
+      "IDENTITY_MATRIX",
+      "info",
+      "isArrayEqual",
+      "normalizeUnicode",
+      "OPS",
+      "PromiseCapability",
+      "shadow",
+      "stringToPDFString",
+      "TextRenderingMode",
+      "Util",
+      "warn"
+    ],
+    "./cmap.js": [
+      "CMapFactory",
+      "IdentityCMap"
+    ],
+    "./primitives.js": [
+      "Cmd",
+      "Dict",
+      "EOF",
+      "isName",
+      "Name",
+      "Ref",
+      "RefSet"
+    ],
+    "./fonts.js": [
+      "ErrorFont",
+      "Font"
+    ],
+    "./encodings.js": [
+      "getEncoding",
+      "MacRomanEncoding",
+      "StandardEncoding",
+      "SymbolSetEncoding",
+      "WinAnsiEncoding",
+      "ZapfDingbatsEncoding"
+    ],
+    "./standard_fonts.js": [
+      "getFontNameToFileMap",
+      "getSerifFonts",
+      "getStandardFontName",
+      "getStdFontMap",
+      "getSymbolsFonts",
+      "isKnownFontName"
+    ],
+    "./pattern.js": [
+      "getTilingPatternIR",
+      "Pattern"
+    ],
+    "./xfa_fonts.js": [
+      "getXfaFontDict",
+      "getXfaFontName"
+    ],
+    "./to_unicode_map.js": [
+      "IdentityToUnicodeMap",
+      "ToUnicodeMap"
+    ],
+    "./function.js": [
+      "isPDFFunction",
+      "PDFFunctionFactory"
+    ],
+    "./parser.js": [
+      "Lexer",
+      "Parser"
+    ],
+    "./image_utils.js": [
+      "LocalColorSpaceCache",
+      "LocalGStateCache",
+      "LocalImageCache",
+      "LocalTilingPatternCache",
+      "RegionalImageCache"
+    ],
+    "./stream.js": [
+      "NullStream",
+      "Stream"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./bidi.js": [
+      "bidi"
+    ],
+    "./colorspace.js": [
+      "ColorSpace"
+    ],
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./fonts_utils.js": [
+      "FontFlags"
+    ],
+    "./font_substitutions.js": [
+      "getFontSubstitution"
+    ],
+    "./glyphlist.js": [
+      "getGlyphsUnicode"
+    ],
+    "./core_utils.js": [
+      "getLookupTableFactory"
+    ],
+    "./metrics.js": [
+      "getMetrics"
+    ],
+    "./unicode.js": [
+      "getUnicodeForGlyph"
+    ],
+    "./image_resizer.js": [
+      "ImageResizer"
+    ],
+    "../shared/murmurhash3.js": [
+      "MurmurHash3_64"
+    ],
+    "./operator_list.js": [
+      "OperatorList"
+    ],
+    "./image.js": [
+      "PDFImage"
+    ]
+  },
+  "./src/core/file_spec.js": {
+    "../shared/util.js": [
+      "stringToPDFString",
+      "warn"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./primitives.js": [
+      "Dict"
+    ]
+  },
+  "./src/core/flate_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "../shared/util.js": [
+      "FormatError"
+    ]
+  },
+  "./src/core/font_renderer.js": {
+    "../shared/util.js": [
+      "bytesToString",
+      "FONT_IDENTITY_MATRIX",
+      "FormatError",
+      "unreachable",
+      "warn"
+    ],
+    "./cff_parser.js": [
+      "CFFParser"
+    ],
+    "./glyphlist.js": [
+      "getGlyphsUnicode"
+    ],
+    "./encodings.js": [
+      "StandardEncoding"
+    ],
+    "./stream.js": [
+      "Stream"
+    ]
+  },
+  "./src/core/font_substitutions.js": {
+    "./fonts_utils.js": [
+      "normalizeFontName"
+    ],
+    "./core_utils.js": [
+      "validateFontName"
+    ]
+  },
+  "./src/core/fonts.js": {
+    "../shared/util.js": [
+      "assert",
+      "bytesToString",
+      "FONT_IDENTITY_MATRIX",
+      "FormatError",
+      "info",
+      "shadow",
+      "string32",
+      "warn"
+    ],
+    "./cff_parser.js": [
+      "CFFCompiler",
+      "CFFParser"
+    ],
+    "./fonts_utils.js": [
+      "FontFlags",
+      "MacStandardGlyphOrdering",
+      "normalizeFontName",
+      "recoverGlyphName",
+      "SEAC_ANALYSIS_ENABLED"
+    ],
+    "./unicode.js": [
+      "getCharUnicodeCategory",
+      "getUnicodeForGlyph",
+      "getUnicodeRangeFor",
+      "mapSpecialUnicodeValues"
+    ],
+    "./glyphlist.js": [
+      "getDingbatsGlyphsUnicode",
+      "getGlyphsUnicode"
+    ],
+    "./encodings.js": [
+      "getEncoding",
+      "MacRomanEncoding",
+      "StandardEncoding",
+      "SymbolSetEncoding",
+      "WinAnsiEncoding",
+      "ZapfDingbatsEncoding"
+    ],
+    "./standard_fonts.js": [
+      "getGlyphMapForStandardFonts",
+      "getNonStdFontMap",
+      "getSerifFonts",
+      "getStdFontMap",
+      "getSupplementalGlyphMapForArialBlack",
+      "getSupplementalGlyphMapForCalibri"
+    ],
+    "./to_unicode_map.js": [
+      "IdentityToUnicodeMap",
+      "ToUnicodeMap"
+    ],
+    "./cff_font.js": [
+      "CFFFont"
+    ],
+    "./font_renderer.js": [
+      "FontRendererFactory"
+    ],
+    "./metrics.js": [
+      "getFontBasicMetrics"
+    ],
+    "./glyf.js": [
+      "GlyfTable"
+    ],
+    "./cmap.js": [
+      "IdentityCMap"
+    ],
+    "./opentype_file_builder.js": [
+      "OpenTypeFileBuilder"
+    ],
+    "./core_utils.js": [
+      "readUint32"
+    ],
+    "./stream.js": [
+      "Stream"
+    ],
+    "./type1_font.js": [
+      "Type1Font"
+    ]
+  },
+  "./src/core/fonts_utils.js": {
+    "./encodings.js": [
+      "getEncoding",
+      "StandardEncoding"
+    ],
+    "./glyphlist.js": [
+      "getGlyphsUnicode"
+    ],
+    "./unicode.js": [
+      "getUnicodeForGlyph"
+    ],
+    "../shared/util.js": [
+      "info"
+    ]
+  },
+  "./src/core/function.js": {
+    "./primitives.js": [
+      "Dict",
+      "Ref"
+    ],
+    "../shared/util.js": [
+      "FeatureTest",
+      "FormatError",
+      "info",
+      "shadow",
+      "unreachable"
+    ],
+    "./ps_parser.js": [
+      "PostScriptLexer",
+      "PostScriptParser"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./image_utils.js": [
+      "LocalFunctionCache"
+    ]
+  },
+  "./src/core/glyf.js": {},
+  "./src/core/glyphlist.js": {
+    "./core_utils.js": [
+      "getLookupTableFactory"
+    ]
+  },
+  "./src/core/helvetica_factors.js": {},
+  "./src/core/image.js": {
+    "../shared/util.js": [
+      "assert",
+      "FeatureTest",
+      "FormatError",
+      "ImageKind",
+      "info",
+      "warn"
+    ],
+    "../shared/image_utils.js": [
+      "convertBlackAndWhiteToRGBA",
+      "convertToRGBA"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./colorspace.js": [
+      "ColorSpace"
+    ],
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./image_resizer.js": [
+      "ImageResizer"
+    ],
+    "./jpeg_stream.js": [
+      "JpegStream"
+    ],
+    "./jpx.js": [
+      "JpxImage"
+    ],
+    "./primitives.js": [
+      "Name"
+    ]
+  },
+  "./src/core/image_resizer.js": {
+    "../shared/util.js": [
+      "FeatureTest",
+      "ImageKind",
+      "shadow"
+    ]
+  },
+  "./src/core/image_utils.js": {
+    "../shared/util.js": [
+      "assert",
+      "MAX_IMAGE_SIZE_TO_CACHE",
+      "unreachable",
+      "warn"
+    ],
+    "./primitives.js": [
+      "RefSetCache"
+    ]
+  },
+  "./src/core/jbig2.js": {
+    "../shared/util.js": [
+      "BaseException",
+      "shadow"
+    ],
+    "./core_utils.js": [
+      "log2",
+      "readInt8",
+      "readUint16",
+      "readUint32"
+    ],
+    "./arithmetic_decoder.js": [
+      "ArithmeticDecoder"
+    ],
+    "./ccitt.js": [
+      "CCITTFaxDecoder"
+    ]
+  },
+  "./src/core/jbig2_stream.js": {
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./primitives.js": [
+      "Dict"
+    ],
+    "./jbig2.js": [
+      "Jbig2Image"
+    ],
+    "../shared/util.js": [
+      "shadow"
+    ]
+  },
+  "./src/core/jpeg_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./primitives.js": [
+      "Dict"
+    ],
+    "./jpg.js": [
+      "JpegImage"
+    ],
+    "../shared/util.js": [
+      "shadow"
+    ]
+  },
+  "./src/core/jpg.js": {
+    "../shared/util.js": [
+      "assert",
+      "BaseException",
+      "warn"
+    ],
+    "../shared/image_utils.js": [
+      "grayToRGBA"
+    ],
+    "./core_utils.js": [
+      "readUint16"
+    ]
+  },
+  "./src/core/jpx.js": {
+    "../shared/util.js": [
+      "BaseException",
+      "info",
+      "unreachable",
+      "warn"
+    ],
+    "./core_utils.js": [
+      "log2",
+      "readUint16",
+      "readUint32"
+    ],
+    "./arithmetic_decoder.js": [
+      "ArithmeticDecoder"
+    ]
+  },
+  "./src/core/jpx_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./jpx.js": [
+      "JpxImage"
+    ],
+    "../shared/util.js": [
+      "shadow"
+    ]
+  },
+  "./src/core/liberationsans_widths.js": {},
+  "./src/core/lzw_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ]
+  },
+  "./src/core/metadata_parser.js": {
+    "./xml_parser.js": [
+      "SimpleXMLParser"
+    ]
+  },
+  "./src/core/metrics.js": {
+    "./core_utils.js": [
+      "getLookupTableFactory"
+    ]
+  },
+  "./src/core/myriadpro_factors.js": {},
+  "./src/core/name_number_tree.js": {
+    "./primitives.js": [
+      "Dict",
+      "RefSet"
+    ],
+    "../shared/util.js": [
+      "FormatError",
+      "unreachable",
+      "warn"
+    ]
+  },
+  "./src/core/object_loader.js": {
+    "./primitives.js": [
+      "Dict",
+      "Ref",
+      "RefSet"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./core_utils.js": [
+      "MissingDataException"
+    ],
+    "../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/opentype_file_builder.js": {
+    "./core_utils.js": [
+      "readUint32"
+    ],
+    "../shared/util.js": [
+      "string32"
+    ]
+  },
+  "./src/core/operator_list.js": {
+    "../shared/util.js": [
+      "ImageKind",
+      "OPS",
+      "RenderingIntentFlag",
+      "warn"
+    ]
+  },
+  "./src/core/parser.js": {
+    "../shared/util.js": [
+      "assert",
+      "bytesToString",
+      "FormatError",
+      "info",
+      "warn"
+    ],
+    "./primitives.js": [
+      "Cmd",
+      "Dict",
+      "EOF",
+      "isCmd",
+      "Name",
+      "Ref"
+    ],
+    "./core_utils.js": [
+      "isWhiteSpace",
+      "MissingDataException",
+      "ParserEOFException"
+    ],
+    "./stream.js": [
+      "NullStream",
+      "Stream"
+    ],
+    "./ascii_85_stream.js": [
+      "Ascii85Stream"
+    ],
+    "./ascii_hex_stream.js": [
+      "AsciiHexStream"
+    ],
+    "./ccitt_stream.js": [
+      "CCITTFaxStream"
+    ],
+    "./flate_stream.js": [
+      "FlateStream"
+    ],
+    "./jbig2_stream.js": [
+      "Jbig2Stream"
+    ],
+    "./jpeg_stream.js": [
+      "JpegStream"
+    ],
+    "./jpx_stream.js": [
+      "JpxStream"
+    ],
+    "./lzw_stream.js": [
+      "LZWStream"
+    ],
+    "./predictor_stream.js": [
+      "PredictorStream"
+    ],
+    "./run_length_stream.js": [
+      "RunLengthStream"
+    ]
+  },
+  "./src/core/pattern.js": {
+    "../shared/util.js": [
+      "assert",
+      "FormatError",
+      "info",
+      "unreachable",
+      "Util",
+      "warn"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./colorspace.js": [
+      "ColorSpace"
+    ],
+    "./core_utils.js": [
+      "MissingDataException"
+    ]
+  },
+  "./src/core/pdf_manager.js": {
+    "../shared/util.js": [
+      "createValidAbsoluteUrl",
+      "FeatureTest",
+      "shadow",
+      "unreachable",
+      "warn"
+    ],
+    "./chunked_stream.js": [
+      "ChunkedStreamManager"
+    ],
+    "./core_utils.js": [
+      "MissingDataException"
+    ],
+    "./document.js": [
+      "PDFDocument"
+    ],
+    "./stream.js": [
+      "Stream"
+    ]
+  },
+  "./src/core/predictor_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ],
+    "./primitives.js": [
+      "Dict"
+    ],
+    "../shared/util.js": [
+      "FormatError"
+    ]
+  },
+  "./src/core/primitives.js": {
+    "../shared/util.js": [
+      "assert",
+      "shadow",
+      "unreachable"
+    ]
+  },
+  "./src/core/ps_parser.js": {
+    "../shared/util.js": [
+      "FormatError",
+      "shadow"
+    ],
+    "./primitives.js": [
+      "EOF"
+    ],
+    "./core_utils.js": [
+      "isWhiteSpace"
+    ]
+  },
+  "./src/core/run_length_stream.js": {
+    "./decode_stream.js": [
+      "DecodeStream"
+    ]
+  },
+  "./src/core/segoeui_factors.js": {},
+  "./src/core/standard_fonts.js": {
+    "./core_utils.js": [
+      "getLookupTableFactory"
+    ],
+    "./fonts_utils.js": [
+      "normalizeFontName"
+    ]
+  },
+  "./src/core/stream.js": {
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "../shared/util.js": [
+      "stringToBytes"
+    ]
+  },
+  "./src/core/struct_tree.js": {
+    "./primitives.js": [
+      "Dict",
+      "isName",
+      "Name",
+      "Ref"
+    ],
+    "../shared/util.js": [
+      "stringToPDFString",
+      "warn"
+    ],
+    "./name_number_tree.js": [
+      "NumberTree"
+    ]
+  },
+  "./src/core/to_unicode_map.js": {
+    "../shared/util.js": [
+      "unreachable"
+    ]
+  },
+  "./src/core/type1_font.js": {
+    "./cff_parser.js": [
+      "CFF",
+      "CFFCharset",
+      "CFFCompiler",
+      "CFFHeader",
+      "CFFIndex",
+      "CFFPrivateDict",
+      "CFFStandardStrings",
+      "CFFStrings",
+      "CFFTopDict"
+    ],
+    "../shared/util.js": [
+      "FormatError",
+      "warn"
+    ],
+    "./fonts_utils.js": [
+      "SEAC_ANALYSIS_ENABLED",
+      "type1FontGlyphMapping"
+    ],
+    "./core_utils.js": [
+      "isWhiteSpace"
+    ],
+    "./stream.js": [
+      "Stream"
+    ],
+    "./type1_parser.js": [
+      "Type1Parser"
+    ]
+  },
+  "./src/core/type1_parser.js": {
+    "./encodings.js": [
+      "getEncoding"
+    ],
+    "./core_utils.js": [
+      "isWhiteSpace"
+    ],
+    "./stream.js": [
+      "Stream"
+    ],
+    "../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/unicode.js": {
+    "./core_utils.js": [
+      "getLookupTableFactory"
+    ]
+  },
+  "./src/core/worker.js": {
+    "../shared/util.js": [
+      "AbortException",
+      "assert",
+      "getVerbosityLevel",
+      "info",
+      "InvalidPDFException",
+      "MissingPDFException",
+      "PasswordException",
+      "PromiseCapability",
+      "setVerbosityLevel",
+      "stringToPDFString",
+      "UnexpectedResponseException",
+      "UnknownErrorException",
+      "VerbosityLevel",
+      "warn"
+    ],
+    "./core_utils.js": [
+      "arrayBuffersToBytes",
+      "getNewAnnotationsMap",
+      "XRefParseException"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "Ref"
+    ],
+    "./pdf_manager.js": [
+      "LocalPdfManager",
+      "NetworkPdfManager"
+    ],
+    "./annotation.js": [
+      "AnnotationFactory"
+    ],
+    "./cleanup_helper.js": [
+      "clearGlobalCaches"
+    ],
+    "./writer.js": [
+      "incrementalUpdate"
+    ],
+    "../shared/is_node.js": [
+      "isNodeJS"
+    ],
+    "../shared/message_handler.js": [
+      "MessageHandler"
+    ],
+    "./worker_stream.js": [
+      "PDFWorkerStream"
+    ]
+  },
+  "./src/core/worker_stream.js": {
+    "../shared/util.js": [
+      "assert"
+    ]
+  },
+  "./src/core/writer.js": {
+    "../shared/util.js": [
+      "bytesToString",
+      "info",
+      "stringToBytes",
+      "warn"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "isName",
+      "Name",
+      "Ref"
+    ],
+    "./core_utils.js": [
+      "escapePDFName",
+      "escapeString",
+      "numberToString",
+      "parseXFAPath"
+    ],
+    "./xml_parser.js": [
+      "SimpleDOMNode",
+      "SimpleXMLParser"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./crypto.js": [
+      "calculateMD5"
+    ]
+  },
+  "./src/core/xfa/bind.js": {
+    "./symbol_utils.js": [
+      "$appendChild",
+      "$clone",
+      "$consumed",
+      "$content",
+      "$data",
+      "$finalize",
+      "$getAttributeIt",
+      "$getChildren",
+      "$getDataValue",
+      "$getParent",
+      "$getRealChildrenByNameIt",
+      "$hasSettableValue",
+      "$indexOf",
+      "$insertAt",
+      "$isBindable",
+      "$isDataValue",
+      "$isDescendent",
+      "$namespaceId",
+      "$nodeName",
+      "$removeChild",
+      "$setValue",
+      "$text"
+    ],
+    "./template.js": [
+      "BindItems",
+      "Field",
+      "Items",
+      "SetProperty",
+      "Text"
+    ],
+    "./som.js": [
+      "createDataNode",
+      "searchNode"
+    ],
+    "./xfa_object.js": [
+      "XFAAttribute",
+      "XFAObjectArray",
+      "XmlObject"
+    ],
+    "./namespaces.js": [
+      "NamespaceIds"
+    ],
+    "../../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/xfa/builder.js": {
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./symbol_utils.js": [
+      "$cleanup",
+      "$finalize",
+      "$ids",
+      "$isNsAgnostic",
+      "$nsAttributes",
+      "$onChild",
+      "$resolvePrototypes",
+      "$root"
+    ],
+    "./setup.js": [
+      "NamespaceSetUp"
+    ],
+    "./template.js": [
+      "Template"
+    ],
+    "./unknown.js": [
+      "UnknownNamespace"
+    ],
+    "../../shared/util.js": [
+      "warn"
+    ],
+    "./xfa_object.js": [
+      "XFAObject"
+    ]
+  },
+  "./src/core/xfa/config.js": {
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./symbol_utils.js": [
+      "$content",
+      "$finalize"
+    ],
+    "./xfa_object.js": [
+      "ContentObject",
+      "IntegerObject",
+      "Option01",
+      "Option10",
+      "OptionObject",
+      "StringObject",
+      "XFAObject",
+      "XFAObjectArray"
+    ],
+    "./utils.js": [
+      "getInteger",
+      "getStringOption"
+    ],
+    "../../shared/util.js": [
+      "shadow",
+      "warn"
+    ]
+  },
+  "./src/core/xfa/connection_set.js": {
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./xfa_object.js": [
+      "StringObject",
+      "XFAObject",
+      "XFAObjectArray"
+    ]
+  },
+  "./src/core/xfa/data.js": {
+    "./symbol_utils.js": [
+      "$getAttributes",
+      "$getChildren",
+      "$nodeName",
+      "$setValue",
+      "$toString",
+      "$uid"
+    ]
+  },
+  "./src/core/xfa/datasets.js": {
+    "./symbol_utils.js": [
+      "$appendChild",
+      "$isNsAgnostic",
+      "$namespaceId",
+      "$nodeName",
+      "$onChild"
+    ],
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./xfa_object.js": [
+      "XFAObject",
+      "XmlObject"
+    ]
+  },
+  "./src/core/xfa/factory.js": {
+    "./symbol_utils.js": [
+      "$appendChild",
+      "$globalData",
+      "$nodeName",
+      "$text",
+      "$toHTML",
+      "$toPages"
+    ],
+    "./bind.js": [
+      "Binder"
+    ],
+    "./data.js": [
+      "DataHandler"
+    ],
+    "./fonts.js": [
+      "FontFinder"
+    ],
+    "./utils.js": [
+      "stripQuotes"
+    ],
+    "../../shared/util.js": [
+      "warn"
+    ],
+    "./parser.js": [
+      "XFAParser"
+    ],
+    "./xhtml.js": [
+      "XhtmlNamespace"
+    ]
+  },
+  "./src/core/xfa/fonts.js": {
+    "./symbol_utils.js": [
+      "$globalData"
+    ],
+    "./utils.js": [
+      "stripQuotes"
+    ],
+    "../../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/xfa/formcalc_lexer.js": {},
+  "./src/core/xfa/formcalc_parser.js": {
+    "./formcalc_lexer.js": [
+      "Lexer",
+      "TOKEN"
+    ]
+  },
+  "./src/core/xfa/html_utils.js": {
+    "./symbol_utils.js": [
+      "$content",
+      "$extra",
+      "$getParent",
+      "$getSubformParent",
+      "$getTemplateRoot",
+      "$globalData",
+      "$nodeName",
+      "$pushGlyphs",
+      "$text",
+      "$toStyle"
+    ],
+    "../../shared/util.js": [
+      "createValidAbsoluteUrl",
+      "warn"
+    ],
+    "./utils.js": [
+      "getMeasurement",
+      "stripQuotes"
+    ],
+    "./fonts.js": [
+      "selectFont"
+    ],
+    "./text.js": [
+      "TextMeasure"
+    ],
+    "./xfa_object.js": [
+      "XFAObject"
+    ]
+  },
+  "./src/core/xfa/layout.js": {
+    "./symbol_utils.js": [
+      "$extra",
+      "$flushHTML",
+      "$getSubformParent",
+      "$getTemplateRoot",
+      "$isSplittable",
+      "$isThereMoreWidth"
+    ],
+    "./html_utils.js": [
+      "measureToString"
+    ]
+  },
+  "./src/core/xfa/locale_set.js": {
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./xfa_object.js": [
+      "ContentObject",
+      "StringObject",
+      "XFAObject",
+      "XFAObjectArray"
+    ],
+    "./utils.js": [
+      "getInteger",
+      "getStringOption"
+    ]
+  },
+  "./src/core/xfa/namespaces.js": {},
+  "./src/core/xfa/parser.js": {
+    "./symbol_utils.js": [
+      "$acceptWhitespace",
+      "$clean",
+      "$content",
+      "$finalize",
+      "$globalData",
+      "$isCDATAXml",
+      "$nsAttributes",
+      "$onChild",
+      "$onText",
+      "$setId"
+    ],
+    "../xml_parser.js": [
+      "XMLParserBase",
+      "XMLParserErrorCode"
+    ],
+    "./builder.js": [
+      "Builder"
+    ],
+    "../../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/xfa/setup.js": {
+    "./config.js": [
+      "ConfigNamespace"
+    ],
+    "./connection_set.js": [
+      "ConnectionSetNamespace"
+    ],
+    "./datasets.js": [
+      "DatasetsNamespace"
+    ],
+    "./locale_set.js": [
+      "LocaleSetNamespace"
+    ],
+    "./signature.js": [
+      "SignatureNamespace"
+    ],
+    "./stylesheet.js": [
+      "StylesheetNamespace"
+    ],
+    "./template.js": [
+      "TemplateNamespace"
+    ],
+    "./xdp.js": [
+      "XdpNamespace"
+    ],
+    "./xhtml.js": [
+      "XhtmlNamespace"
+    ]
+  },
+  "./src/core/xfa/signature.js": {
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./xfa_object.js": [
+      "XFAObject"
+    ]
+  },
+  "./src/core/xfa/som.js": {
+    "./symbol_utils.js": [
+      "$getChildren",
+      "$getChildrenByClass",
+      "$getChildrenByName",
+      "$getParent"
+    ],
+    "../../shared/util.js": [
+      "warn"
+    ]
+  },
+  "./src/core/xfa/stylesheet.js": {
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./xfa_object.js": [
+      "XFAObject"
+    ]
+  },
+  "./src/core/xfa/symbol_utils.js": {},
+  "./src/core/xfa/template.js": {
+    "./symbol_utils.js": [
+      "$acceptWhitespace",
+      "$addHTML",
+      "$appendChild",
+      "$childrenToHTML",
+      "$clean",
+      "$cleanPage",
+      "$content",
+      "$data",
+      "$extra",
+      "$finalize",
+      "$flushHTML",
+      "$getAvailableSpace",
+      "$getChildren",
+      "$getContainedChildren",
+      "$getExtra",
+      "$getNextPage",
+      "$getParent",
+      "$getSubformParent",
+      "$getTemplateRoot",
+      "$globalData",
+      "$hasSettableValue",
+      "$ids",
+      "$isBindable",
+      "$isCDATAXml",
+      "$isSplittable",
+      "$isThereMoreWidth",
+      "$isTransparent",
+      "$isUsable",
+      "$namespaceId",
+      "$nodeName",
+      "$onChild",
+      "$onText",
+      "$popPara",
+      "$pushPara",
+      "$removeChild",
+      "$searchNode",
+      "$setSetAttributes",
+      "$setValue",
+      "$tabIndex",
+      "$text",
+      "$toHTML",
+      "$toPages",
+      "$toStyle",
+      "$uid"
+    ],
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./layout.js": [
+      "addHTML",
+      "checkDimensions",
+      "flushHTML",
+      "getAvailableSpace"
+    ],
+    "./html_utils.js": [
+      "computeBbox",
+      "createWrapper",
+      "fixDimensions",
+      "fixTextIndent",
+      "fixURL",
+      "isPrintOnly",
+      "layoutClass",
+      "layoutNode",
+      "measureToString",
+      "setAccess",
+      "setFontFamily",
+      "setMinMaxDimensions",
+      "setPara",
+      "toStyle"
+    ],
+    "./xfa_object.js": [
+      "ContentObject",
+      "Option01",
+      "OptionObject",
+      "StringObject",
+      "XFAObject",
+      "XFAObjectArray"
+    ],
+    "./utils.js": [
+      "getBBox",
+      "getColor",
+      "getFloat",
+      "getInteger",
+      "getKeyword",
+      "getMeasurement",
+      "getRatio",
+      "getRelevant",
+      "getStringOption",
+      "HTMLResult"
+    ],
+    "../../shared/util.js": [
+      "stringToBytes",
+      "Util",
+      "warn"
+    ],
+    "./fonts.js": [
+      "getMetrics"
+    ],
+    "../core_utils.js": [
+      "recoverJsURL"
+    ],
+    "./som.js": [
+      "searchNode"
+    ]
+  },
+  "./src/core/xfa/text.js": {
+    "./fonts.js": [
+      "selectFont"
+    ]
+  },
+  "./src/core/xfa/unknown.js": {
+    "./namespaces.js": [
+      "$buildXFAObject"
+    ],
+    "./xfa_object.js": [
+      "XmlObject"
+    ]
+  },
+  "./src/core/xfa/utils.js": {
+    "../../shared/util.js": [
+      "shadow"
+    ]
+  },
+  "./src/core/xfa/xdp.js": {
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./symbol_utils.js": [
+      "$namespaceId",
+      "$nodeName",
+      "$onChildCheck"
+    ],
+    "./xfa_object.js": [
+      "XFAObject",
+      "XFAObjectArray"
+    ]
+  },
+  "./src/core/xfa/xfa_object.js": {
+    "./symbol_utils.js": [
+      "$acceptWhitespace",
+      "$addHTML",
+      "$appendChild",
+      "$childrenToHTML",
+      "$clean",
+      "$cleanup",
+      "$clone",
+      "$consumed",
+      "$content",
+      "$dump",
+      "$extra",
+      "$finalize",
+      "$flushHTML",
+      "$getAttributeIt",
+      "$getAttributes",
+      "$getAvailableSpace",
+      "$getChildren",
+      "$getChildrenByClass",
+      "$getChildrenByName",
+      "$getChildrenByNameIt",
+      "$getContainedChildren",
+      "$getDataValue",
+      "$getParent",
+      "$getRealChildrenByNameIt",
+      "$getSubformParent",
+      "$getTemplateRoot",
+      "$globalData",
+      "$hasSettableValue",
+      "$indexOf",
+      "$insertAt",
+      "$isBindable",
+      "$isCDATAXml",
+      "$isDataValue",
+      "$isDescendent",
+      "$isNsAgnostic",
+      "$isSplittable",
+      "$isThereMoreWidth",
+      "$isTransparent",
+      "$lastAttribute",
+      "$namespaceId",
+      "$nodeName",
+      "$nsAttributes",
+      "$onChild",
+      "$onChildCheck",
+      "$onText",
+      "$popPara",
+      "$pushPara",
+      "$removeChild",
+      "$resolvePrototypes",
+      "$root",
+      "$setId",
+      "$setSetAttributes",
+      "$setValue",
+      "$text",
+      "$toHTML",
+      "$toString",
+      "$toStyle",
+      "$uid"
+    ],
+    "./utils.js": [
+      "getInteger",
+      "getKeyword",
+      "HTMLResult"
+    ],
+    "../../shared/util.js": [
+      "shadow",
+      "utf8StringToString",
+      "warn"
+    ],
+    "../core_utils.js": [
+      "encodeToXmlString"
+    ],
+    "./namespaces.js": [
+      "NamespaceIds"
+    ],
+    "./som.js": [
+      "searchNode"
+    ]
+  },
+  "./src/core/xfa/xhtml.js": {
+    "./symbol_utils.js": [
+      "$acceptWhitespace",
+      "$childrenToHTML",
+      "$clean",
+      "$content",
+      "$extra",
+      "$getChildren",
+      "$getParent",
+      "$globalData",
+      "$nodeName",
+      "$onText",
+      "$pushGlyphs",
+      "$text",
+      "$toHTML"
+    ],
+    "./namespaces.js": [
+      "$buildXFAObject",
+      "NamespaceIds"
+    ],
+    "./html_utils.js": [
+      "fixTextIndent",
+      "fixURL",
+      "measureToString",
+      "setFontFamily"
+    ],
+    "./utils.js": [
+      "getMeasurement",
+      "HTMLResult",
+      "stripQuotes"
+    ],
+    "./xfa_object.js": [
+      "XmlObject"
+    ]
+  },
+  "./src/core/xfa_fonts.js": {
+    "./calibri_factors.js": [
+      "CalibriBoldFactors",
+      "CalibriBoldItalicFactors",
+      "CalibriBoldItalicMetrics",
+      "CalibriBoldMetrics",
+      "CalibriItalicFactors",
+      "CalibriItalicMetrics",
+      "CalibriRegularFactors",
+      "CalibriRegularMetrics"
+    ],
+    "./primitives.js": [
+      "Dict",
+      "Name"
+    ],
+    "./helvetica_factors.js": [
+      "HelveticaBoldFactors",
+      "HelveticaBoldItalicFactors",
+      "HelveticaBoldItalicMetrics",
+      "HelveticaBoldMetrics",
+      "HelveticaItalicFactors",
+      "HelveticaItalicMetrics",
+      "HelveticaRegularFactors",
+      "HelveticaRegularMetrics"
+    ],
+    "./liberationsans_widths.js": [
+      "LiberationSansBoldItalicMapping",
+      "LiberationSansBoldItalicWidths",
+      "LiberationSansBoldMapping",
+      "LiberationSansBoldWidths",
+      "LiberationSansItalicMapping",
+      "LiberationSansItalicWidths",
+      "LiberationSansRegularMapping",
+      "LiberationSansRegularWidths"
+    ],
+    "./myriadpro_factors.js": [
+      "MyriadProBoldFactors",
+      "MyriadProBoldItalicFactors",
+      "MyriadProBoldItalicMetrics",
+      "MyriadProBoldMetrics",
+      "MyriadProItalicFactors",
+      "MyriadProItalicMetrics",
+      "MyriadProRegularFactors",
+      "MyriadProRegularMetrics"
+    ],
+    "./segoeui_factors.js": [
+      "SegoeuiBoldFactors",
+      "SegoeuiBoldItalicFactors",
+      "SegoeuiBoldItalicMetrics",
+      "SegoeuiBoldMetrics",
+      "SegoeuiItalicFactors",
+      "SegoeuiItalicMetrics",
+      "SegoeuiRegularFactors",
+      "SegoeuiRegularMetrics"
+    ],
+    "./core_utils.js": [
+      "getLookupTableFactory"
+    ],
+    "./fonts_utils.js": [
+      "normalizeFontName"
+    ]
+  },
+  "./src/core/xml_parser.js": {
+    "./core_utils.js": [
+      "encodeToXmlString"
+    ]
+  },
+  "./src/core/xref.js": {
+    "../shared/util.js": [
+      "assert",
+      "bytesToString",
+      "FormatError",
+      "info",
+      "InvalidPDFException",
+      "warn"
+    ],
+    "./primitives.js": [
+      "CIRCULAR_REF",
+      "Cmd",
+      "Dict",
+      "isCmd",
+      "Ref",
+      "RefSet"
+    ],
+    "./parser.js": [
+      "Lexer",
+      "Parser"
+    ],
+    "./core_utils.js": [
+      "MissingDataException",
+      "ParserEOFException",
+      "XRefEntryException",
+      "XRefParseException"
+    ],
+    "./base_stream.js": [
+      "BaseStream"
+    ],
+    "./crypto.js": [
+      "CipherTransformFactory"
+    ]
+  },
+  "./src/display/annotation_layer.js": {
+    "../shared/util.js": [
+      "AnnotationBorderStyleType",
+      "AnnotationEditorType",
+      "AnnotationType",
+      "assert",
+      "FeatureTest",
+      "LINE_FACTOR",
+      "shadow",
+      "unreachable",
+      "Util",
+      "warn"
+    ],
+    "./display_utils.js": [
+      "AnnotationPrefix",
+      "DOMSVGFactory",
+      "getFilenameFromUrl",
+      "PDFDateString",
+      "setLayerDimensions"
+    ],
+    "./annotation_storage.js": [
+      "AnnotationStorage"
+    ],
+    "../shared/scripting_utils.js": [
+      "ColorConverters"
+    ],
+    "./xfa_layer.js": [
+      "XfaLayer"
+    ]
+  },
+  "./src/display/annotation_storage.js": {
+    "../shared/util.js": [
+      "objectFromMap",
+      "unreachable"
+    ],
+    "./editor/editor.js": [
+      "AnnotationEditor"
+    ],
+    "../shared/murmurhash3.js": [
+      "MurmurHash3_64"
+    ]
+  },
+  "./src/display/api.js": {
+    "../shared/util.js": [
+      "AbortException",
+      "AnnotationMode",
+      "assert",
+      "getVerbosityLevel",
+      "info",
+      "InvalidPDFException",
+      "isArrayBuffer",
+      "MAX_IMAGE_SIZE_TO_CACHE",
+      "MissingPDFException",
+      "PasswordException",
+      "PromiseCapability",
+      "RenderingIntentFlag",
+      "setVerbosityLevel",
+      "shadow",
+      "stringToBytes",
+      "UnexpectedResponseException",
+      "UnknownErrorException",
+      "unreachable",
+      "warn"
+    ],
+    "./annotation_storage.js": [
+      "AnnotationStorage",
+      "PrintAnnotationStorage",
+      "SerializableEmpty"
+    ],
+    "./display_utils.js": [
+      "deprecated",
+      "DOMCanvasFactory",
+      "DOMCMapReaderFactory",
+      "DOMFilterFactory",
+      "DOMStandardFontDataFactory",
+      "isDataScheme",
+      "isValidFetchUrl",
+      "loadScript",
+      "PageViewport",
+      "RenderingCancelledException",
+      "StatTimer"
+    ],
+    "./font_loader.js": [
+      "FontFaceObject",
+      "FontLoader"
+    ],
+    "./canvas.js": [
+      "CanvasGraphics"
+    ],
+    "./worker_options.js": [
+      "GlobalWorkerOptions"
+    ],
+    "../shared/is_node.js": [
+      "isNodeJS"
+    ],
+    "../shared/message_handler.js": [
+      "MessageHandler"
+    ],
+    "./metadata.js": [
+      "Metadata"
+    ],
+    "./optional_content_config.js": [
+      "OptionalContentConfig"
+    ],
+    "./transport_stream.js": [
+      "PDFDataTransportStream"
+    ],
+    "./xfa_text.js": [
+      "XfaText"
+    ]
+  },
+  "./src/display/base_factory.js": {
+    "../shared/util.js": [
+      "CMapCompressionType",
+      "unreachable"
+    ]
+  },
+  "./src/display/canvas.js": {
+    "../shared/util.js": [
+      "FeatureTest",
+      "FONT_IDENTITY_MATRIX",
+      "IDENTITY_MATRIX",
+      "ImageKind",
+      "info",
+      "OPS",
+      "shadow",
+      "TextRenderingMode",
+      "unreachable",
+      "Util",
+      "warn"
+    ],
+    "./display_utils.js": [
+      "getCurrentTransform",
+      "getCurrentTransformInverse",
+      "PixelsPerInch"
+    ],
+    "./pattern_helper.js": [
+      "getShadingPattern",
+      "PathType",
+      "TilingPattern"
+    ],
+    "../shared/image_utils.js": [
+      "convertBlackAndWhiteToRGBA"
+    ],
+    "../shared/is_node.js": [
+      "isNodeJS"
+    ]
+  },
+  "./src/display/content_disposition.js": {
+    "../shared/util.js": [
+      "stringToBytes"
+    ]
+  },
+  "./src/display/display_utils.js": {
+    "./base_factory.js": [
+      "BaseCanvasFactory",
+      "BaseCMapReaderFactory",
+      "BaseFilterFactory",
+      "BaseStandardFontDataFactory",
+      "BaseSVGFactory"
+    ],
+    "../shared/util.js": [
+      "BaseException",
+      "shadow",
+      "stringToBytes",
+      "Util",
+      "warn"
+    ]
+  },
+  "./src/display/editor/annotation_editor_layer.js": {
+    "../../shared/util.js": [
+      "AnnotationEditorType",
+      "FeatureTest"
+    ],
+    "./editor.js": [
+      "AnnotationEditor"
+    ],
+    "./tools.js": [
+      "bindEvents"
+    ],
+    "./freetext.js": [
+      "FreeTextEditor"
+    ],
+    "./ink.js": [
+      "InkEditor"
+    ],
+    "../display_utils.js": [
+      "setLayerDimensions"
+    ]
+  },
+  "./src/display/editor/editor.js": {
+    "./tools.js": [
+      "bindEvents",
+      "ColorManager"
+    ],
+    "../../shared/util.js": [
+      "FeatureTest",
+      "shadow",
+      "unreachable"
+    ]
+  },
+  "./src/display/editor/freetext.js": {
+    "../../shared/util.js": [
+      "AnnotationEditorParamsType",
+      "AnnotationEditorType",
+      "assert",
+      "LINE_FACTOR",
+      "shadow",
+      "Util"
+    ],
+    "./tools.js": [
+      "bindEvents",
+      "KeyboardManager"
+    ],
+    "./editor.js": [
+      "AnnotationEditor"
+    ],
+    "../annotation_layer.js": [
+      "FreeTextAnnotationElement"
+    ]
+  },
+  "./src/display/editor/ink.js": {
+    "../../shared/util.js": [
+      "AnnotationEditorParamsType",
+      "AnnotationEditorType",
+      "Util"
+    ],
+    "./editor.js": [
+      "AnnotationEditor"
+    ],
+    "../annotation_layer.js": [
+      "InkAnnotationElement"
+    ],
+    "./tools.js": [
+      "opacityToHex"
+    ]
+  },
+  "./src/display/editor/tools.js": {
+    "../../shared/util.js": [
+      "AnnotationEditorPrefix",
+      "AnnotationEditorType",
+      "FeatureTest",
+      "shadow",
+      "Util",
+      "warn"
+    ],
+    "../display_utils.js": [
+      "getColorValues",
+      "getRGB",
+      "PixelsPerInch"
+    ]
+  },
+  "./src/display/fetch_stream.js": {
+    "../shared/util.js": [
+      "AbortException",
+      "assert",
+      "PromiseCapability",
+      "warn"
+    ],
+    "./network_utils.js": [
+      "createResponseStatusError",
+      "extractFilenameFromHeader",
+      "validateRangeRequestCapabilities",
+      "validateResponseStatus"
+    ]
+  },
+  "./src/display/font_loader.js": {
+    "../shared/util.js": [
+      "assert",
+      "bytesToString",
+      "FeatureTest",
+      "shadow",
+      "string32",
+      "unreachable",
+      "warn"
+    ],
+    "../shared/is_node.js": [
+      "isNodeJS"
+    ]
+  },
+  "./src/display/metadata.js": {
+    "../shared/util.js": [
+      "objectFromMap"
+    ]
+  },
+  "./src/display/network.js": {
+    "../shared/util.js": [
+      "assert",
+      "PromiseCapability",
+      "stringToBytes"
+    ],
+    "./network_utils.js": [
+      "createResponseStatusError",
+      "extractFilenameFromHeader",
+      "validateRangeRequestCapabilities"
+    ]
+  },
+  "./src/display/network_utils.js": {
+    "../shared/util.js": [
+      "assert",
+      "MissingPDFException",
+      "UnexpectedResponseException"
+    ],
+    "./content_disposition.js": [
+      "getFilenameFromContentDispositionHeader"
+    ],
+    "./display_utils.js": [
+      "isPdfFile"
+    ]
+  },
+  "./src/display/node_stream.js": {
+    "../shared/util.js": [
+      "AbortException",
+      "assert",
+      "MissingPDFException",
+      "PromiseCapability"
+    ],
+    "./network_utils.js": [
+      "extractFilenameFromHeader",
+      "validateRangeRequestCapabilities"
+    ]
+  },
+  "./src/display/node_utils.js": {
+    "./base_factory.js": [
+      "BaseCanvasFactory",
+      "BaseCMapReaderFactory",
+      "BaseFilterFactory",
+      "BaseStandardFontDataFactory"
+    ]
+  },
+  "./src/display/optional_content_config.js": {
+    "../shared/util.js": [
+      "objectFromMap",
+      "unreachable",
+      "warn"
+    ],
+    "../shared/murmurhash3.js": [
+      "MurmurHash3_64"
+    ]
+  },
+  "./src/display/pattern_helper.js": {
+    "../shared/util.js": [
+      "FormatError",
+      "info",
+      "unreachable",
+      "Util"
+    ],
+    "./display_utils.js": [
+      "getCurrentTransform"
+    ]
+  },
+  "./src/display/svg.js": {
+    "./display_utils.js": [
+      "deprecated",
+      "DOMSVGFactory"
+    ],
+    "../shared/util.js": [
+      "FONT_IDENTITY_MATRIX",
+      "IDENTITY_MATRIX",
+      "ImageKind",
+      "OPS",
+      "TextRenderingMode",
+      "Util",
+      "warn"
+    ],
+    "../shared/is_node.js": [
+      "isNodeJS"
+    ]
+  },
+  "./src/display/text_layer.js": {
+    "../shared/util.js": [
+      "AbortException",
+      "FeatureTest",
+      "PromiseCapability",
+      "Util"
+    ],
+    "./display_utils.js": [
+      "deprecated",
+      "setLayerDimensions"
+    ]
+  },
+  "./src/display/transport_stream.js": {
+    "../shared/util.js": [
+      "assert",
+      "PromiseCapability"
+    ],
+    "./display_utils.js": [
+      "isPdfFile"
+    ]
+  },
+  "./src/display/worker_options.js": {},
+  "./src/display/xfa_layer.js": {
+    "./xfa_text.js": [
+      "XfaText"
+    ]
+  },
+  "./src/display/xfa_text.js": {},
+  "./src/interfaces.js": {},
+  "./src/license_header.js": {},
+  "./src/license_header_libre.js": {},
+  "./src/pdf.image_decoders.js": {
+    "./shared/util.js": [
+      "getVerbosityLevel",
+      "setVerbosityLevel"
+    ],
+    "./core/jbig2.js": [
+      "Jbig2Image"
+    ],
+    "./core/jpg.js": [
+      "JpegImage"
+    ],
+    "./core/jpx.js": [
+      "JpxImage"
+    ]
+  },
+  "./src/pdf.js": {
+    "./shared/util.js": [
+      "AbortException",
+      "AnnotationEditorParamsType",
+      "AnnotationEditorType",
+      "AnnotationMode",
+      "CMapCompressionType",
+      "createValidAbsoluteUrl",
+      "FeatureTest",
+      "ImageKind",
+      "InvalidPDFException",
+      "MissingPDFException",
+      "normalizeUnicode",
+      "OPS",
+      "PasswordResponses",
+      "PermissionFlag",
+      "PromiseCapability",
+      "shadow",
+      "UnexpectedResponseException",
+      "Util",
+      "VerbosityLevel"
+    ],
+    "./display/api.js": [
+      "build",
+      "getDocument",
+      "PDFDataRangeTransport",
+      "PDFWorker",
+      "version"
+    ],
+    "./display/display_utils.js": [
+      "getFilenameFromUrl",
+      "getPdfFilenameFromUrl",
+      "getXfaPageViewport",
+      "isDataScheme",
+      "isPdfFile",
+      "loadScript",
+      "PDFDateString",
+      "PixelsPerInch",
+      "RenderingCancelledException",
+      "setLayerDimensions"
+    ],
+    "./display/text_layer.js": [
+      "renderTextLayer",
+      "updateTextLayer"
+    ],
+    "./display/editor/annotation_editor_layer.js": [
+      "AnnotationEditorLayer"
+    ],
+    "./display/editor/tools.js": [
+      "AnnotationEditorUIManager"
+    ],
+    "./display/annotation_layer.js": [
+      "AnnotationLayer"
+    ],
+    "./display/worker_options.js": [
+      "GlobalWorkerOptions"
+    ],
+    "./display/xfa_layer.js": [
+      "XfaLayer"
+    ]
+  },
+  "./src/pdf.sandbox.external.js": {},
+  "./src/pdf.scripting.js": {
+    "./scripting_api/initialization.js": [
+      "initSandbox"
+    ]
+  },
+  "./src/pdf.worker.entry.js": {},
+  "./src/pdf.worker.js": {
+    "./core/worker.js": [
+      "WorkerMessageHandler"
+    ]
+  },
+  "./src/scripting_api/aform.js": {
+    "./constants.js": [
+      "GlobalConstants"
+    ]
+  },
+  "./src/scripting_api/app.js": {
+    "./app_utils.js": [
+      "FORMS_VERSION",
+      "USERACTIVATION_CALLBACKID",
+      "VIEWER_TYPE",
+      "VIEWER_VARIATION",
+      "VIEWER_VERSION"
+    ],
+    "./color.js": [
+      "Color"
+    ],
+    "./event.js": [
+      "EventDispatcher"
+    ],
+    "./fullscreen.js": [
+      "FullScreen"
+    ],
+    "./pdf_object.js": [
+      "PDFObject"
+    ],
+    "./thermometer.js": [
+      "Thermometer"
+    ]
+  },
+  "./src/scripting_api/app_utils.js": {},
+  "./src/scripting_api/color.js": {
+    "../shared/scripting_utils.js": [
+      "ColorConverters"
+    ],
+    "./pdf_object.js": [
+      "PDFObject"
+    ]
+  },
+  "./src/scripting_api/common.js": {},
+  "./src/scripting_api/console.js": {
+    "./pdf_object.js": [
+      "PDFObject"
+    ]
+  },
+  "./src/scripting_api/constants.js": {},
+  "./src/scripting_api/doc.js": {
+    "./common.js": [
+      "createActionsMap"
+    ],
+    "./pdf_object.js": [
+      "PDFObject"
+    ],
+    "./print_params.js": [
+      "PrintParams"
+    ],
+    "./constants.js": [
+      "ZoomType"
+    ]
+  },
+  "./src/scripting_api/error.js": {},
+  "./src/scripting_api/event.js": {
+    "./app_utils.js": [
+      "USERACTIVATION_CALLBACKID",
+      "USERACTIVATION_MAXTIME_VALIDITY"
+    ]
+  },
+  "./src/scripting_api/field.js": {
+    "./common.js": [
+      "createActionsMap",
+      "getFieldType"
+    ],
+    "./color.js": [
+      "Color"
+    ],
+    "./pdf_object.js": [
+      "PDFObject"
+    ]
+  },
+  "./src/scripting_api/fullscreen.js": {
+    "./constants.js": [
+      "Cursor"
+    ],
+    "./pdf_object.js": [
+      "PDFObject"
+    ]
+  },
+  "./src/scripting_api/initialization.js": {
+    "./constants.js": [
+      "Border",
+      "Cursor",
+      "Display",
+      "Font",
+      "GlobalConstants",
+      "Highlight",
+      "Position",
+      "ScaleHow",
+      "ScaleWhen",
+      "Style",
+      "Trans",
+      "ZoomType"
+    ],
+    "./field.js": [
+      "CheckboxField",
+      "Field",
+      "RadioButtonField"
+    ],
+    "./aform.js": [
+      "AForm"
+    ],
+    "./app.js": [
+      "App"
+    ],
+    "./color.js": [
+      "Color"
+    ],
+    "./console.js": [
+      "Console"
+    ],
+    "./doc.js": [
+      "Doc"
+    ],
+    "./proxy.js": [
+      "ProxyHandler"
+    ],
+    "./util.js": [
+      "Util"
+    ]
+  },
+  "./src/scripting_api/pdf_object.js": {},
+  "./src/scripting_api/print_params.js": {},
+  "./src/scripting_api/proxy.js": {},
+  "./src/scripting_api/thermometer.js": {
+    "./pdf_object.js": [
+      "PDFObject"
+    ]
+  },
+  "./src/scripting_api/util.js": {
+    "./pdf_object.js": [
+      "PDFObject"
+    ]
+  },
+  "./src/shared/cffStandardStrings.js": {},
+  "./src/shared/compatibility.js": {
+    "./is_node.js": [
+      "isNodeJS"
+    ]
+  },
+  "./src/shared/fonts_utils.js": {},
+  "./src/shared/image_utils.js": {
+    "./util.js": [
+      "FeatureTest",
+      "ImageKind"
+    ]
+  },
+  "./src/shared/is_node.js": {},
+  "./src/shared/message_handler.js": {
+    "./util.js": [
+      "AbortException",
+      "assert",
+      "MissingPDFException",
+      "PasswordException",
+      "PromiseCapability",
+      "UnexpectedResponseException",
+      "UnknownErrorException",
+      "unreachable"
+    ]
+  },
+  "./src/shared/murmurhash3.js": {
+    "./util.js": [
+      "isArrayBuffer"
+    ]
+  },
+  "./src/shared/scripting_utils.js": {},
+  "./src/shared/util.js": {}
+}

@@ -4,10 +4,68 @@ import { useState, useRef, useEffect } from 'react'
 import * as joint from 'jointjs';
 
 export default function Home() {
+  const width = 1600;
+  const height = 2000;
+
   const [count, setCount] = useState(0)
   const [graph, setGraph] = useState(null)
   const refDiv = useRef();
   const refDiv2 = useRef();
+
+  const addBlock=(text, x, y, w=100, h=40)=>{
+    const rect = new joint.shapes.standard.Rectangle();
+    rect.position(x, y);
+    rect.resize(w, h);
+    rect.attr({
+        body: {
+            fill: 'blue'
+        },
+        label: {
+            text: text,
+            fill: 'white'
+        }
+    });
+    rect.addTo(graph);
+  }
+
+  const importDeps = async () => {
+    const data = await getData("/api/import");
+    const deps = JSON.parse(data.deps);
+
+    const files = {};
+    for (let k of Object.keys(deps)){
+      let v = deps[k];
+      const master = k.replace(/^\.\/src\//, '');
+
+      if (files[master]) files[master] = files[master] + 1;
+      else files[master] = 0;
+
+      const slaves = Object.keys(v);
+      if (slaves.length>0) {
+        for (let slave of slaves){
+          if (files[slave]) files[slave] = files[slave] + 1;
+          else files[slave] = 0;
+        }
+      }
+    }
+
+    const texts = Object.keys(files);
+    console.log(texts);
+    let x = 40;
+    let y = 20;
+    let w = 100
+    let h = 40;
+    for (let i=0; i<texts.length; i++){
+      addBlock(texts[i], x, y, w, h);
+      x = x + 150;
+      if (x > width) {
+        x = 40;
+        y = y + 60;
+      }
+
+    }
+    
+  }
 
   const getData = async (url) => {
     const response = await fetch(url, {
@@ -42,8 +100,8 @@ export default function Home() {
     var paper = new joint.dia.Paper({
         el: refDiv.current,
         model: graph,
-        width: 1600,
-        height: 1400,
+        width: width,
+        height: height,
         gridSize: 1,
         cellViewNamespace: namespace
     });
@@ -125,7 +183,7 @@ export default function Home() {
         <button className="btn btn-primary mx-2" onClick={save}>Save</button>
         <button className="btn btn-primary mx-2" onClick={load}>Load</button>
         <button className="btn btn-primary mx-2" onClick={test}>Test</button>
-        <button className="btn btn-primary mx-2" onClick={()=>{setCount(count+1)}}>Test2</button>
+        <button className="btn btn-primary mx-2" onClick={importDeps}>Import</button>
       </div>
 
 
