@@ -12,7 +12,8 @@ export default function Home() {
   const refDiv = useRef();
   const refDiv2 = useRef();
 
-  const addBlock=(text, x, y, w=100, h=40)=>{
+  const addBlock=(text, pos)=>{
+    const {x, y, w, h} = pos;
     const rect = new joint.shapes.standard.Rectangle();
     rect.position(x, y);
     rect.resize(w, h);
@@ -26,6 +27,23 @@ export default function Home() {
         }
     });
     rect.addTo(graph);
+
+    pos.x = x + 150;
+    if (pos.x > width) {
+      pos.x = 40;
+      pos.y = pos.y + 60;
+    }
+
+    return rect;
+  }
+
+  const addLink=(source, target)=>{
+    const link = new joint.shapes.standard.Link();
+    link.source(source);
+    link.target(target);
+    link.router('orthogonal');
+    link.connector('rounded');
+    link.addTo(graph);
   }
 
   const importDeps = async () => {
@@ -33,38 +51,43 @@ export default function Home() {
     const deps = JSON.parse(data.deps);
 
     const files = {};
+    const pos = {
+      x: 40,
+      y: 20,
+      w: 100,
+      h: 40,
+    };
+
     for (let k of Object.keys(deps)){
       let v = deps[k];
-      const master = k.replace(/^\.\/src\//, '');
+      const sourceName = k.replace(/^\.\/src\//, '');
+      const targets = Object.keys(v);
+      if (targets.length>0) {
+        let source;
+        if (files[sourceName]) {
+          source = files[sourceName];
+        }
+        else {
+          console.log(sourceName);
+          source = addBlock(sourceName, pos);
+          files[sourceName] = source;
+        }
+  
 
-      if (files[master]) files[master] = files[master] + 1;
-      else files[master] = 0;
+        for (let targetName of targets){
+          let target;
+          if (files[targetName]) {
+            target = files[targetName];
+          }
+          else {
+            target = addBlock(targetName, pos);
+            files[targetName] = target;
+          }
 
-      const slaves = Object.keys(v);
-      if (slaves.length>0) {
-        for (let slave of slaves){
-          if (files[slave]) files[slave] = files[slave] + 1;
-          else files[slave] = 0;
+          addLink(source, target);
         }
       }
     }
-
-    const texts = Object.keys(files);
-    console.log(texts);
-    let x = 40;
-    let y = 20;
-    let w = 100
-    let h = 40;
-    for (let i=0; i<texts.length; i++){
-      addBlock(texts[i], x, y, w, h);
-      x = x + 150;
-      if (x > width) {
-        x = 40;
-        y = y + 60;
-      }
-
-    }
-    
   }
 
   const getData = async (url) => {
@@ -170,20 +193,20 @@ export default function Home() {
 
   }
 
-  return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      
-      <div ref={refDiv2} className='overflow-scroll w-[800px] h-[600px] bg-green-200'>
-        <div ref={refDiv} className='bg-green-200'></div>
-      </div>
-      
+  /*<div ref={refDiv2} className='overflow-scroll w-[800px] h-[600px] bg-green-200'>*/
 
+  return (
+    <main className="flex min-h-screen flex-col items-center p-4">
       <p>count = {count}</p>
       <div className="join m-2">
         <button className="btn btn-primary mx-2" onClick={save}>Save</button>
         <button className="btn btn-primary mx-2" onClick={load}>Load</button>
         <button className="btn btn-primary mx-2" onClick={test}>Test</button>
         <button className="btn btn-primary mx-2" onClick={importDeps}>Import</button>
+      </div>
+
+      <div ref={refDiv2} className='overflow-scroll w-full h-[800px] bg-green-200'>
+        <div ref={refDiv} className='bg-green-200'></div>
       </div>
 
 
