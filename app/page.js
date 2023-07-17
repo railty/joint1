@@ -7,6 +7,28 @@ export default function Home() {
   const width = 1600;
   const height = 2000;
 
+  const initX = 40;
+  const initY = 20;
+  const stepX = 120;
+  const stepY = 60;
+  const pos = {
+    x: initX,
+    y: initY,
+    w: 100,
+    h: 40,
+  };
+  const nextX = ()=>{
+    pos.x += stepX;
+    if (pos.x > width) {
+      pos.x = initX;
+      pos.y += stepY;
+    }
+  }
+  const nextY = ()=>{
+    pos.x = initX;
+    pos.y += stepY;
+  }
+
   const [count, setCount] = useState(0)
   const [graph, setGraph] = useState(null)
   const refDiv = useRef();
@@ -28,12 +50,7 @@ export default function Home() {
     });
     rect.addTo(graph);
 
-    pos.x = x + 150;
-    if (pos.x > width) {
-      pos.x = 40;
-      pos.y = pos.y + 60;
-    }
-
+    nextX();
     return rect;
   }
 
@@ -47,6 +64,25 @@ export default function Home() {
   }
 
   const importDeps = async () => {
+    const data = await getData("/api/import");
+    const deps = JSON.parse(data.deps);
+
+    const files = {};
+
+    const file = './src/display/api.js';
+debugger;
+    let source = addBlock(file, pos);
+    nextY();
+
+    for (let depFile of Object.keys(deps[file])){
+      let target = addBlock(depFile, pos);
+      addLink(source, target);
+      console.log(depFile);
+    }
+    
+  }
+
+  const importDeps2 = async () => {
     const data = await getData("/api/import");
     const deps = JSON.parse(data.deps);
 
