@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import * as joint from 'jointjs';
+import * as path from 'path';
 
 export default function Home() {
   const width = 1600;
@@ -11,12 +12,9 @@ export default function Home() {
   const initY = 20;
   const stepX = 120;
   const stepY = 60;
-  const pos = {
-    x: initX,
-    y: initY,
-    w: 100,
-    h: 40,
-  };
+  const w = 100;
+  const h = 40;
+
   const nextX = ()=>{
     pos.x += stepX;
     if (pos.x > width) {
@@ -34,8 +32,7 @@ export default function Home() {
   const refDiv = useRef();
   const refDiv2 = useRef();
 
-  const addBlock=(text, pos)=>{
-    const {x, y, w, h} = pos;
+  const addBlock=(text, x, y)=>{
     const rect = new joint.shapes.standard.Rectangle();
     rect.position(x, y);
     rect.resize(w, h);
@@ -49,8 +46,6 @@ export default function Home() {
         }
     });
     rect.addTo(graph);
-
-    nextX();
     return rect;
   }
 
@@ -63,23 +58,59 @@ export default function Home() {
     link.addTo(graph);
   }
 
-  const importDeps = async () => {
-    const data = await getData("/api/import");
-    const deps = JSON.parse(data.deps);
+  let files = {};
+  let deps = null;
+  const addFile = (file, x, y)=>{
+    let source = files[file];
+    let ix = x;
+    let iy = y;
 
-    const files = {};
-
-    const file = './src/display/api.js';
-debugger;
-    let source = addBlock(file, pos);
-    nextY();
-
-    for (let depFile of Object.keys(deps[file])){
-      let target = addBlock(depFile, pos);
-      addLink(source, target);
-      console.log(depFile);
+    if (!source) {
+      source = addBlock(file, x, y);
+      ix = initX;
+      iy = y + stepY;
+      files[file] = source;
     }
-    
+    if(deps[file]){
+      for (let depFile of Object.keys(deps[file])){
+        let target = addFile(depFile, ix, iy);
+        ix += stepX;
+        if (ix > width) {
+          ix = initX;
+          iy += stepY;
+        }
+  
+        addLink(source, target);
+      }
+    }
+    return source;
+  }
+
+  const importDeps = async () => {
+
+    const data = await getData("/api/import");
+    deps = JSON.parse(data.deps);
+    const newDeps = {};
+
+    for (let dep of Object.keys(deps)){
+      const p = (path.parse(dep)).dir;
+      const files = deps[dep];
+
+      const newFiles = {};
+      for(let f of Object.keys(files)){
+        const newFile = path.resolve(p, f);
+        newFiles[newFile] = files[f];
+      }
+
+      const newDep = path.resolve(dep);
+      newDeps[newDep] = newFiles;
+    }
+    deps = newDeps;
+
+    files = {};
+
+    const file = 'src/display/api.js';
+    let source = addFile(file, initX, initY);
   }
 
   const importDeps2 = async () => {
